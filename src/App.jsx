@@ -19,6 +19,10 @@ function App() {
       .then((users) => setMonsters(users))
   }, [])
 
+  // Title berubah berdasarkan monster yang di ketik.
+  useEffect(() => {
+    document.title = searcField || "Monster Roledex"
+  }, [searcField])
 
   // Memfilter monsters berdasarkan input pencarian
   useEffect(() => {
